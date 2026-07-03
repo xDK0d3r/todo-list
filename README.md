@@ -31,11 +31,17 @@ This project helped me strengthen my understanding of:
 * Input validation
 * Error handling
 * Writing modular and maintainable code
-* CRUD operations in a command-line application
+* CRUD operations in a command-line 
 
-## 📈 Future Improvements
+## 🚀 Project Status
+>
+>**Status:** 🚧 In Development
+>
+>Core features are currently being implemented. Additional functionality and improvements will be added as development progresses.
 
-This project is feature-complete for its current scope. Future enhancements may include:
+## 📈 Future Improvements (planned)
+
+Future enhancements may include:
 
 * Save tasks to a file
 * JSON-based task storage
