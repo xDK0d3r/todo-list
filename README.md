@@ -20,13 +20,6 @@ A command-line To-Do List application built with Python that helps users organiz
 
 * Python 3
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-* Python 3.x installed on your system
-
-
 ## 💡 What I Learned
 
 This project helped me strengthen my understanding of:
@@ -61,5 +54,4 @@ This project is licensed under the MIT License.
 
 **Dhanush K | xDK0d3r**
 
-If you found this project helpful, consider giving it a ⭐ on GitHub.
-
+Python Backend Developer focused on building practical projects and continuously improving through hands-on learning.
