@@ -1,5 +1,8 @@
 # This file handles the Main Menu and User input.
 
+# import tasks
+import task_manager
+
 print("Welcome to the TO-DO List (CLI)")
 
 # Menu Options
@@ -17,13 +20,13 @@ while True :
   # Control flow
   match user_choice :
     case 1 : 
-        add_task()
+       task_manager.add_task()
     case 2 :
-        edit_task()
+        task_manager.edit_task()
     case 3 :
-        delete_task()
+        task_manager.delete_task()
     case 4 :
-        all_task()
+        task_manager.view_tasks()
     case 5 :
         exit()
     case _ :
