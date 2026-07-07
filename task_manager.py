@@ -49,7 +49,20 @@ def view_tasks() :
     for index, tasks in enumerate(task_list) :
         print(index," | ",tasks)
 
+# View Completed Tasks
+def view_completed_tasks() :
+    print("View Completed Tasks")
+    print("ID | TASKS")
+    # filtering
+    for index, tasks in enumerate(task_list) :
+        if tasks["completed"] == True :
+            print(index," | ",tasks)
 
-    
-    
-
+# View Pending Tasks
+def view_pending_tasks() :
+    print("View Pending Tasks")
+    print("ID | TASKS")
+    #filtering 
+    for index, tasks in enumerate(task_list) :
+        if tasks["completed"] == False :
+            print(index," | ",tasks)
