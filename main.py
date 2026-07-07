@@ -11,7 +11,9 @@ print("2.Edit Task")
 print("3.Delete Task")
 print("4.Show All Tasks")
 print("5.Mark Task as Completed")
-print("6.Exit")
+print("6.View Completed Tasks")
+print("7.View Pending Tasks")
+print("8.Exit")
 
 while True :
   
@@ -31,6 +33,10 @@ while True :
     case 5 :
         task_manager.mark_task()
     case 6 :
-        exit()
+        task_manager.view_completed_tasks()
+    case 7 :
+        task_manager.view_pending_tasks()
+    case 8 :
+          exit()
     case _ :
         print("Invalid Option!")
