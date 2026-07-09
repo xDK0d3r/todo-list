@@ -1,6 +1,9 @@
 # This file handles Task Operations.
 
-task_list = []
+# import storage
+import storage
+
+task_list = storage.load_tasks()
 
 # Add Task
 def add_task() :
@@ -10,6 +13,7 @@ def add_task() :
     add_dict = {"task":task_add,
                 "completed":False}
     task_list.append(add_dict)
+    storage.save_tasks(task_list)
     print("Task Added Sucessfully")
 
 # Edit Task
@@ -19,6 +23,7 @@ def edit_task() :
     if 0 <= task_id < len(task_list) :
         task_edit = input("Enter Task :")
         task_list[task_id]["task"] = task_edit
+        storage.save_tasks(task_list)
         print("Task Edited Sucessfully")
     else :
         print("invalid Task ID")
@@ -29,6 +34,8 @@ def delete_task() :
     task_id = int(input("Select Task by ID :"))
     if 0 <= task_id < len(task_list) :
         task_list.pop(task_id)
+        storage.save_tasks(task_list)
+        print("Task Deleted Sucessfully")
     else :
         print("invalid Task ID")
     
@@ -38,6 +45,8 @@ def mark_task() :
     task_id = int(input("Select Task by ID :"))
     if 0 <= task_id < len(task_list) :
         task_list[task_id]["completed"] = True
+        storage.save_tasks(task_list)
+        print("Task Marked as Completed")
     else :
         print("invalid Task ID")
 
