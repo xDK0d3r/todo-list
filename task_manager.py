@@ -9,46 +9,65 @@ task_list = storage.load_tasks()
 def add_task() :
     # Task add flow
     print("Add Task")
+    # Handle Empty String
     task_add = input("Enter Task :")
-    add_dict = {"task":task_add,
-                "completed":False}
-    task_list.append(add_dict)
-    storage.save_tasks(task_list)
-    print("Task Added Sucessfully")
+    if task_add.strip() == "" :
+       print("Empty Task wasn't Accepted")
+    else :
+       add_dict = {"task":task_add,"completed":False}
+       task_list.append(add_dict)
+       storage.save_tasks(task_list)
+       print("Task Added Sucessfully")
 
 # Edit Task
 def edit_task() :
     print("Edit Task")
-    task_id = int(input("Select Task by ID :"))
-    if 0 <= task_id < len(task_list) :
+    # Handle Exception
+    try :
+     task_id = int(input("Select Task by ID :"))
+     if 0 <= task_id < len(task_list) :
         task_edit = input("Enter Task :")
-        task_list[task_id]["task"] = task_edit
-        storage.save_tasks(task_list)
-        print("Task Edited Sucessfully")
-    else :
-        print("invalid Task ID")
+        if task_edit.strip() == "" :
+         print("Empty Task wasn't Accepted")
+        else :
+         task_list[task_id]["task"] = task_edit
+         storage.save_tasks(task_list)
+         print("Task Edited Sucessfully")
+     else :
+        print("Invalid Task ID")
+    except ValueError :
+        print("Invalid Task ID")
 
 # Delete Task
 def delete_task() :
     print("Delete Task")
-    task_id = int(input("Select Task by ID :"))
-    if 0 <= task_id < len(task_list) :
+    # Handle Exception
+    try :
+     task_id = int(input("Select Task by ID :"))
+     if 0 <= task_id < len(task_list) :
         task_list.pop(task_id)
         storage.save_tasks(task_list)
         print("Task Deleted Sucessfully")
-    else :
-        print("invalid Task ID")
+     else :
+        print("Invalid Task ID")
+    except ValueError :
+        print("Invalid Task ID")
     
+
 # Mark Task Completed
 def mark_task() :
     print("Mark Task as Completed")
-    task_id = int(input("Select Task by ID :"))
-    if 0 <= task_id < len(task_list) :
+    # Handle Exception
+    try :
+     task_id = int(input("Select Task by ID :"))
+     if 0 <= task_id < len(task_list) :
         task_list[task_id]["completed"] = True
         storage.save_tasks(task_list)
         print("Task Marked as Completed")
-    else :
-        print("invalid Task ID")
+     else :
+        print("Invalid Task ID")
+    except ValueError :
+        print("Invalid Task ID")
 
 # View Tasks
 def view_tasks() :
