@@ -13,6 +13,8 @@ A command-line To-Do List application built with Python that helps users organiz
 * ✅ Mark tasks as completed
 * 🗑️ Delete tasks
 * 📌 Display completed and pending tasks
+* 💾 Save tasks to a file
+* 📂 JSON-based task storage
 * ✔️ Input validation for a better user experience
 * 🖥️ Menu-driven command-line interface
 
@@ -20,31 +22,33 @@ A command-line To-Do List application built with Python that helps users organiz
 
 * Python 3
 
-## 💡 What I Learned
+## 📚 What I Learned
 
 This project helped me strengthen my understanding of:
 
 * Functions
 * Lists and list operations
+* Dictionaries and nested data structures
 * Loops (`while` and `for`)
 * Conditional statements
 * Input validation
-* Error handling
+* Exception handling
+* CRUD operations in a command-line application
+* File handling
+* JSON data persistence
 * Writing modular and maintainable code
-* CRUD operations in a command-line 
+* Separating application logic from data storage
 
 ## 🚀 Project Status
 >
->**Status:** 🚧 In Development
+>**Status:** ✅ Feature Complete
 >
->Core features are currently being implemented. Additional functionality and improvements will be added as development progresses.
+> This project is **feature-complete** for its current scope. Future enhancements may be added in later versions.
 
-## 📈 Future Improvements (planned)
+## 📈 Future Improvements
 
 Future enhancements may include:
 
-* Save tasks to a file
-* JSON-based task storage
 * Task priorities
 * Due dates
 * Search functionality
